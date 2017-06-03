@@ -18,10 +18,10 @@ describe "user views clinics" do
   end
 
   xit "has links to each clinic" do
-    expect(page).to have_link(nil, href: clinic_path(clinic1))
-    expect(page).to have_link(nil, href: clinic_path(clinic2))
-    expect(page).to have_link(nil, href: clinic_path(clinic3))
-    expect(page).to have_link(nil, href: clinic_path(clinic4))
+    expect(page).to have_link(clinic1.title, href: clinic_path(clinic1))
+    expect(page).to have_link(clinic2.title, href: clinic_path(clinic2))
+    expect(page).to have_link(clinic3.title, href: clinic_path(clinic3))
+    expect(page).to have_link(clinic4.title, href: clinic_path(clinic4))
   end
 
   xit "has a link to create a new clinic" do
