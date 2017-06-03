@@ -7,7 +7,7 @@ describe "user creates a clinic" do
     visit new_clinic_path
   end
 
-  it "creates a new clinic with valid data" do
+  xit "creates a new clinic with valid data" do
     fill_in("Title", with: "Blitz of Baked Goods")
     fill_in("Description", with: "Carbohydrates plus oven equals delicious.")
     fill_in("Offered at", with: "04/10/2017, 3:00 PM")
@@ -17,7 +17,7 @@ describe "user creates a clinic" do
     expect(Clinic.count).to eq(clinic_count + 1)
   end
 
-  it "fails to create a clinic with invalid data" do
+  xit "fails to create a clinic with invalid data" do
     fill_in("Description", with: "Carbohydrates plus oven equals delicious.")
     click_button("submit")
 
